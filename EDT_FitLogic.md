@@ -1,8 +1,186 @@
+# EDT - Proyecto FitLogic
+
 ```mermaid
 graph TD
     ROOT["FitLogic - EDT"] --> A["1. Gestión del Proyecto"]
     ROOT --> B["2. Desarrollo del Sistema"]
     ROOT --> C["3. Diseño UI/UX"]
-    ... (aquí va todo el resto de tu código de arriba) ...
+    ROOT --> D["4. Base de Datos"]
+    ROOT --> E["5. Testing y Calidad"]
+    ROOT --> F["6. Implementación y Despliegue"]
+
+    A --> A1["1.1 Planificación"]
+    A1 --> A1a["Definición del alcance"]
+    A1 --> A1b["Definición de objetivos"]
+    A1 --> A1c["Cronograma del proyecto"]
+    A1 --> A1d["Asignación de recursos"]
+
+    A --> A2["1.2 Gestión de Riesgos"]
+    A2 --> A2a["Identificación de riesgos"]
+    A2 --> A2b["Plan de mitigación"]
+    A2 --> A2c["Seguimiento de incidencias"]
+
+    A --> A3["1.3 Documentación"]
+    A3 --> A3a["Relevamiento de requisitos"]
+    A3 --> A3b["Documentación técnica"]
+    A3 --> A3c["Manual de usuario"]
+
+    B --> B1["2.1 Autenticación y Seguridad"]
+    B1 --> B1a["2.1.1 Registro de Usuarios"]
+    B1a --> B1a1["RF01 Registro de usuario"]
+    B1a --> B1a2["RF02 Creación cuenta email/contraseña"]
+    B1a --> B1a3["Validación email único"]
+    B1a --> B1a4["Validación DNI único"]
+    B1a --> B1a5["Generación ID de atleta"]
+    B1a --> B1a6["Generación automática nombre usuario"]
+
+    B1 --> B1b["2.1.2 Inicio y Cierre de Sesión"]
+    B1b --> B1b1["Login de usuarios"]
+    B1b --> B1b2["Logout seguro"]
+    B1b --> B1b3["Manejo de sesiones y tokens"]
+    B1b --> B1b4["Redirección automática por rol"]
+
+    B1 --> B1c["2.1.3 Verificación y Recuperación"]
+    B1c --> B1c1["Verificación de email"]
+    B1c --> B1c2["Envío código/link activación"]
+    B1c --> B1c3["Recuperación de contraseña"]
+    B1c --> B1c4["Validación código recuperación"]
+    B1c --> B1c5["Cambio de contraseña"]
+
+    B1 --> B1d["2.1.4 Seguridad"]
+    B1d --> B1d1["Encriptación de contraseñas"]
+    B1d --> B1d2["Bloqueo por intentos fallidos"]
+    B1d --> B1d3["Validaciones frontend/backend"]
+    B1d --> B1d4["Reautenticación cambios sensibles"]
+    B1d --> B1d5["Protección de datos personales"]
+
+    B --> B2["2.2 Onboarding Biomecánico"]
+    B2 --> B2a["2.2.1 Captura Datos Biométricos"]
+    B2a --> B2a1["Registro de edad, peso, altura"]
+    B2a --> B2a2["Registro género biológico"]
+    B2a --> B2a3["Registro objetivos fitness"]
+
+    B2 --> B2b["2.2.2 Selector Anatómico"]
+    B2b --> B2b1["Diseño interfaz anatómica"]
+    B2b --> B2b2["Marcado de lesiones"]
+    B2b --> B2b3["Compatibilidad táctil"]
+    B2b --> B2b4["Validación lesiones graves"]
+
+    B2 --> B2c["2.2.3 Procesamiento de Datos"]
+    B2c --> B2c1["Cálculo de TMB"]
+    B2c --> B2c2["Clasificación de experiencia"]
+    B2c --> B2c3["Etiquetado biomecánico"]
+    B2c --> B2c4["Restricciones por edad"]
+
+    B2 --> B2d["2.2.4 Tutorial Inicial"]
+    B2d --> B2d1["Implementación Coach Marks"]
+    B2d --> B2d2["Guía de navegación inicial"]
+
+    B --> B3["2.3 Gestión de Roles y Accesos"]
+    B3 --> B3a["2.3.1 Roles del Sistema"]
+    B3a --> B3a1["Rol Administrador"]
+    B3a --> B3a2["Rol Atleta"]
+
+    B3 --> B3b["2.3.2 Permisos"]
+    B3b --> B3b1["Restricción funciones administrativas"]
+    B3b --> B3b2["Acceso personalizado"]
+    B3b --> B3b3["Validación de permisos"]
+
+    B3 --> B3c["2.3.3 Paneles de Usuario"]
+    B3c --> B3c1["Dashboard de atleta"]
+    B3c --> B3c2["Dashboard administrador"]
+    B3c --> B3c3["Navegación personalizada"]
+
+    B --> B4["2.4 Módulo de Perfil de Usuario"]
+    B4 --> B4a["2.4.1 Visualización de Perfil"]
+    B4a --> B4a1["Mostrar datos personales"]
+    B4a --> B4a2["Mostrar datos biométricos"]
+    B4a --> B4a3["Mostrar foto de perfil"]
+
+    B4 --> B4b["2.4.2 Edición de Perfil"]
+    B4b --> B4b1["Modificación datos personales"]
+    B4b --> B4b2["Cambio de contraseña"]
+    B4b --> B4b3["Actualización de foto"]
+    B4b --> B4b4["Verificación de email"]
+
+    B4 --> B4c["2.4.3 Eliminación de Cuenta"]
+    B4c --> B4c1["Baja de usuario"]
+    B4c --> B4c2["Confirmación de eliminación"]
+
+    B4 --> B4d["2.4.4 Restricciones y Límites"]
+    B4d --> B4d1["Límite de cambios de nombre"]
+    B4d --> B4d2["Restricción de ID único"]
+    B4d --> B4d3["Validación tamaño de imagen"]
+    B4d --> B4d4["Filtro de contenido ofensivo"]
+
+    B --> B5["2.5 Entrenamiento y Seguimiento"]
+    B5 --> B5a["2.5.1 Gestión de Rutinas"]
+    B5a --> B5a1["Visualización de rutinas"]
+    B5a --> B5a2["Control de ejercicios"]
+    B5a --> B5a3["Restricciones biomecánicas"]
+
+    B5 --> B5b["2.5.2 Seguimiento Diario"]
+    B5b --> B5b1["Registro de entrenamientos"]
+    B5b --> B5b2["Seguimiento de progreso"]
+    B5b --> B5b3["Análisis de volumen de carga"]
+
+    B5 --> B5c["2.5.3 Nutrición y Metabolismo"]
+    B5c --> B5c1["Gestión nutricional"]
+    B5c --> B5c2["Relación macros y entrenamiento"]
+    B5c --> B5c3["Seguimiento metabólico"]
+
+    C --> C1["3.1 Diseño UI/UX"]
+    C1 --> C1a["Wireframes"]
+    C1 --> C1b["Diseño Responsive"]
+    C1 --> C1c["Navegación intuitiva"]
+    C1 --> C1d["Accesibilidad visual"]
+
+    C --> C2["3.2 Compatibilidad"]
+    C2 --> C2a["Compatibilidad móvil"]
+    C2 --> C2b["Compatibilidad escritorio"]
+    C2 --> C2c["Compatibilidad navegadores"]
+
+    D --> D1["4.1 Diseño de Base de Datos"]
+    D1 --> D1a["Modelo entidad-relación"]
+    D1 --> D1b["Tablas de usuarios"]
+    D1 --> D1c["Tablas biométricas"]
+    D1 --> D1d["Tablas rutinas y seguimiento"]
+
+    D --> D2["4.2 Integridad y Seguridad"]
+    D2 --> D2a["Restricciones de unicidad"]
+    D2 --> D2b["Validaciones de integridad"]
+    D2 --> D2c["Backups y recuperación"]
+
+    E --> E1["5.1 Pruebas Funcionales"]
+    E1 --> E1a["Registro de usuarios"]
+    E1 --> E1b["Login y recuperación"]
+    E1 --> E1c["Gestión de perfiles"]
+    E1 --> E1d["Gestión de roles"]
+    E1 --> E1e["Onboarding biomecánico"]
+
+    E --> E2["5.2 Pruebas No Funcionales"]
+    E2 --> E2a["Rendimiento"]
+    E2 --> E2b["Seguridad"]
+    E2 --> E2c["Usabilidad"]
+    E2 --> E2d["Compatibilidad"]
+
+    E --> E3["5.3 Corrección de Errores"]
+    E3 --> E3a["Identificación de bugs"]
+    E3 --> E3b["Corrección de incidencias"]
+    E3 --> E3c["Re-testing"]
+
+    F --> F1["6.1 Preparación del Entorno"]
+    F1 --> F1a["Configuración de servidores"]
+    F1 --> F1b["Configuración de base de datos"]
+    F1 --> F1c["Configuración de seguridad"]
+
+    F --> F2["6.2 Publicación"]
+    F2 --> F2a["Deploy de backend"]
+    F2 --> F2b["Deploy de frontend"]
+    F2 --> F2c["Verificación post-despliegue"]
+
+    F --> F3["6.3 Capacitación y Entrega"]
+    F3 --> F3a["Capacitación de usuarios"]
     F3 --> F3b["Entrega de documentación"]
     F3 --> F3c["Cierre del proyecto"]
+```
